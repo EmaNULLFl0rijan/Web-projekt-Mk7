@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="../styles/mainStyle.css">
+    <link rel="stylesheet" href="../styles/gallery.css">
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+    <script src="../scripts/script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>StudyShare</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-adjust"></i> Tema
+        </button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../home.html" id="nav-home">Početna</a></li>
+            <li><a id="nav-gallery" class="active">Galerija</a></li>
+            <li><a href="requestMaterial.html" id="nav-request">Zatraži materijal</a></li>
+            <li><a href="about.html" id="nav-about">O projektu</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="gallery" class="active-section">
+            <h2>Galerija Materijala</h2>
+            <div class="upload-box">
+                <h3>Dodaj novi materijal</h3>
+
+                <div class="upload-inputs">
+                    <input type="text" id="upload-title" placeholder="Naziv (npr. Fizika Skripta)" class="custom-input">
+
+                    <select id="upload-type" class="custom-input">
+                        <option value="pdf">Link na materijale (https)</option>
+                        <option value="image">URL slike</option>
+                    </select>
+
+                    <input type="url" id="upload-url" placeholder="Zalijepi link ovdje (https://...)"
+                        class="custom-input">
+                </div>
+
+                <button onclick="uploadMaterialLink()" class="btn-download" id="btn-upload"
+                    style="margin-top: 10px; width: 100%;">
+                    <i class="fas fa-link"></i> Objavi Materijal
+                </button>
+
+                <p id="upload-status" style="margin-top: 10px; font-weight: bold; color: var(--primary-blue);"></p>
+            </div>
+
+            <div class="gallery-grid" id="gallery-container">
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudyShare - Emanuel Florijan</p>
+        <a href="https://github.com/EmaNULLFl0rijan">github<br></a>
+        <p>emanuelflorijan1@gmail.com</p>
+    </footer>
+</body>
+
+</html>

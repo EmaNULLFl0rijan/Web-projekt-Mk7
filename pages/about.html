@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="../styles/mainStyle.css">
+    <link rel="stylesheet" href="../styles/about.css">
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+    <script src="../scripts/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>StudyShare</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-adjust"></i> Tema
+        </button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../home.html" id="nav-home">Početna</a></li>
+            <li><a href="gallery.html" id="nav-gallery">Galerija</a></li>
+            <li><a href="requestMaterial.html" id="nav-request">Zatraži materijal</a></li>
+            <li><a id="nav-about" class="active">O projektu</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="about" class="active-section">
+            <h2>O Projektu StudyShare</h2>
+            <p>StudyShare je Web stranica razvijena s ciljem olakšavanja dijeljenja materijala među
+                studentima. Omogućava korisnicima da prenose, pregledavaju i komentiraju skripte, bilješke i druge
+                materijale vezane uz studij.</p><br>
+            <h3>Osnovne Značajke:</h3>
+            <ul>
+                <li><strong>Izbori u flexbox navigaciji </strong> (Početna, Galerija materijala, Kolegiji, O projektu)
+                </li>
+                <li><strong>Početna stranica</strong> s kratkim uvodom i slikom </li>
+                <li><strong>Galerija materijala</strong> uređena pomoću CSS Grida </li>
+                <li><strong>Tablični prikaz</strong> traženja materijala </li>
+                <li><strong>Kontakt</strong> u footeru </li>
+                <li><strong>JS: dark mode i dinamičko isticanje</strong> aktivne stranice u navigaciji </li>
+
+            </ul><br>
+            <h3>Dodatne Značajke:</h3>
+            <ul>
+                <li><strong>Firebase</strong> baza podataka </li>
+                <li><strong>Učitavanje Materijala:</strong> Korisnici mogu jednostavno prenijeti linkove za PDF-ove,
+                    slike
+                    skripti ili što god.</li>
+                <li><strong>Zatraži materijal</strong> za bilo koji kolegij </li>
+                <li><strong>Interaktivna Galerija:</strong> Pregledavanje i preuzimanje materijala iz različitih
+                    kolegija.</li>
+                <li><strong>Komentari i Lajkovi:</strong> Mogućnost ostavljanja komentara i lajkanja materijala za
+                    bolju interakciju među studentima.</li>
+                </li>
+            </ul>
+            <p><br>
+                Za više informacija ili suradnju, slobodno me kontaktirajte putem e-maila ili posjetite moj GitHub
+                profil.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudyShare - Emanuel Florijan</p>
+        <a href="https://github.com/EmaNULLFl0rijan">github<br></a>
+        <p>emanuelflorijan1@gmail.com</p>
+    </footer>
+</body>
+
+</html>

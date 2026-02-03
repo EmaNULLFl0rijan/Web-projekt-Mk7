@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Material</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="../styles/mainStyle.css">
+    <link rel="stylesheet" href="../styles/requestMaterial.css">
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+    <script src="../scripts/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>StudyShare</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-adjust"></i> Tema
+        </button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../home.html" id="nav-home">Početna</a></li>
+            <li><a href="gallery.html" id="nav-gallery">Galerija</a></li>
+            <li><a id="nav-request" class="active">Zatraži materijal</a></li>
+            <li><a href="about.html" id="nav-about">O projektu</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="request" class="active-section">
+            <h2>Zatraži Materijal</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Nedostaje ti neka skripta? Unesi podatke o kolegiju i
+                zatraži pomoć kolega.</p>
+
+            <div class="request-form-container">
+                <div class="form-group">
+                    <input type="text" id="req-faculty" placeholder="Faks (npr. FERIT, MEFOS)">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="req-course" placeholder="Naziv kolegija">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="req-prof" placeholder="Nositelj (Profesor)">
+                </div>
+                <div class="form-group">
+                    <input type="number" id="req-ects" placeholder="ECTS">
+                </div>
+                <div class="form-group full-width">
+                    <input type="text" id="req-comment" placeholder="Komentar (npr. 'Trebaju mi vježbe iz 2024.')">
+                </div>
+                <div class="form-group full-width">
+                    <button onclick="handleAddRequest()" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Pošalji Zahtjev
+                    </button>
+                </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+                <table id="requests-table">
+                    <thead>
+                        <tr>
+                            <th>Fakultet</th>
+                            <th>Naziv Kolegija</th>
+                            <th>Nositelj</th>
+                            <th>ECTS</th>
+                            <th>Komentar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudyShare - Emanuel Florijan</p>
+        <a href="https://github.com/EmaNULLFl0rijan">github<br></a>
+        <p>emanuelflorijan1@gmail.com</p>
+    </footer>
+
+</body>
+
+</html>

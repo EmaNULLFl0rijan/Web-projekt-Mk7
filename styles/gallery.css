@@ -1,0 +1,119 @@
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-img-container {
+    height: 160px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #888;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-content {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.upload-box {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px dashed var(--primary-blue);
+    border-radius: 8px;
+    background-color: rgba(0, 51, 102, 0.05); 
+    text-align: center;
+}
+
+.upload-inputs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.custom-input {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    flex: 1;
+    min-width: 150px; 
+}
+
+.like-btn {
+    cursor: pointer;
+    color: #888;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.like-btn:hover { transform: scale(1.1); }
+.like-btn.liked { color: var(--primary-red); }
+
+.btn-download {
+    color: white;
+    background-color: var(--primary-red);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-download:hover { background-color: #b30000; }
+.btn-download:disabled { background-color: #ccc; cursor: not-allowed; }
+
+.download-icon-link {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+.download-icon-link:hover { color: var(--primary-red); }
+
+.comments-section { margin-top: auto; padding-top: 10px; border-top: 1px solid #eee; }
+.comment-list { max-height: 80px; overflow-y: auto; margin-bottom: 5px; font-size: 0.85rem; text-align: left; }
+.single-comment { background: rgba(0,0,0,0.05); padding: 3px 6px; margin-bottom: 3px; border-radius: 3px; }
+.comment-input { width: 100%; padding: 6px; border: 1px solid var(--border-color); border-radius: 4px; background: var(--bg-color); color: var(--text-color); }
+
+body.dark-mode .upload-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: #555;
+}

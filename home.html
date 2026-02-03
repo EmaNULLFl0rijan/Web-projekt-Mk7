@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="styles/mainStyle.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore-compat.js"></script>
+    <script src="scripts/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>StudyShare</h1>
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-adjust"></i> Tema
+        </button>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a id="nav-home" class="active">Početna</a></li>
+            <li><a href="pages/gallery.html" id="nav-gallery">Galerija</a></li>
+            <li><a href="pages/requestMaterial.html" id="nav-request">Zatraži materijal</a></li>
+            <li><a href="pages/about.html" id="nav-about">O projektu</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="active-section">
+            <div>
+                <h2>Dobrodošli na StudyShare</h2>
+                <p>Platforma za dijeljenje materijala, skripti i bilješki s fakulteta.</p>
+                <img src="images/students_learning_together.avif" alt="Studenti uče zajedno">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 StudyShare - Emanuel Florijan</p>
+        <a href="https://github.com/EmaNULLFl0rijan">github<br></a>
+        <p>emanuelflorijan1@gmail.com</p>
+    </footer>
+</body>
+
+</html>
